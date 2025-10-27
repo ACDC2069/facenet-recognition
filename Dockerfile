@@ -1,5 +1,5 @@
 # 使用官方Python运行时作为基础镜像
-FROM efreidevopschina.azurecr.io/cache/library/python:3.11-slim
+FROM python:3.11-slim
 
 # 设置工作目录
 WORKDIR /app
@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libxext6 \
     libxrender-dev \
     libgomp1 \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # 复制依赖文件
@@ -23,10 +24,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制项目文件
 COPY app/ ./app/
 COPY static/ ./static/
-COPY data/ ./data/
 
-# 创建数据目录
-RUN mkdir -p /app/data/images
+# 创建必要的目录结构（包括空的数据目录）
+RUN mkdir -p /app/data/images /app/static
 
 # 暴露端口
 EXPOSE 8000
