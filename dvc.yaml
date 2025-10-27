@@ -1,0 +1,9 @@
+stages:
+  validate_model:
+    cmd: pytest tests/test_face_recognition.py -v
+    deps:
+    - app/face_recognition.py
+    - tests/test_face_recognition.py
+    metrics:
+    - tests/metrics.json:
+        cache: false

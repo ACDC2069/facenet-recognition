@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 测试和文档
+tests/
+*.md
+!README.md
+
+# DVC
+.dvc/
+.dvcignore
+
+# CI/CD
+.github/
+
+# 环境变量（在运行时通过环境变量注入）
+.env
+.env.*
+
+# 其他
+*.log
+.DS_Store
+

@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# DVC
+#.dvc/tmp/
+#.dvc/cache/
+
+# Logs
+*.log
+logs/
+
+# Data files - 修复后的版本
+data/images/*
+!data/images/.gitkeep
+
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+#.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+
+# 项目特定文件
+*.enc
+decrypted_images/
+raw_images/
+
+# DVC 跟踪文件
+!.dvc/config
+.dvc/state
+.dvc/state-journal
+.dvc/state-wal
