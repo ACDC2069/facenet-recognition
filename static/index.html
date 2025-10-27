@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceNet人脸识别系统</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FaceNet人脸识别系统</h1>
+        
+        <div class="video-container">
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <div class="enroll-section">
+                <input type="text" id="nameInput" placeholder="输入姓名">
+                <button id="enrollBtn">录入人脸</button>
+            </div>
+            <div class="recognition-toggle">
+                <button id="toggleBtn">开始识别</button>
+            </div>
+        </div>
+
+        <div class="status">
+            <p id="statusText">等待启动...</p>
+        </div>
+
+        <div class="results">
+            <h3>识别结果</h3>
+            <div id="resultsList"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
+
