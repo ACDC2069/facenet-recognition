@@ -1,22 +1,17 @@
 services:
   facenet-app:
-    image: facenet-recognition-facenet-app:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
     container_name: facenet-recognition
     ports:
       - "7100:8000"
     volumes:
       - ./data:/app/data
-      - ./static:/app/static
     env_file:
       - .env
     environment:
       - APP_HOST=0.0.0.0
       - APP_PORT=8000
-      - PYTHONPATH=/app
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "python", "-c", "print('Health check passed')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 120s
+    # 移除了healthcheck部分
