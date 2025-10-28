@@ -1,4 +1,4 @@
-# FaceNet Face Recognition System Documentation
+# FaceNet Face Recognition System Documentation（MYL与WBN 共同完成2025.10.28）
 
 ## Project Overview / 项目概述
 
